@@ -1,0 +1,382 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf7f2;
+    color: #333;
+}
+
+
+
+
+header {
+    height: 70px;
+    background-color: white;
+
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #8b5e3c;
+}
+
+
+
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 360px;
+
+    background-color: white;
+
+    min-height: 600px;
+}
+
+
+
+
+.bienvenida {
+    padding: 45px 50px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.bienvenida h1 {
+    font-size: 34px;
+
+    margin-bottom: 15px;
+}
+
+.bienvenida p {
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+.buscar {
+    padding: 12px 25px;
+
+    border: 1px solid #777;
+
+    background-color: white;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.buscar:hover {
+    background-color: #f0ebe5;
+}
+
+
+
+
+.pedido {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+
+    border-left: 1px solid #ddd;
+
+    padding: 25px;
+}
+
+.pedido h2 {
+    margin-bottom: 20px;
+
+    font-size: 22px;
+}
+
+
+/* PRODUCTOS DEL PEDIDO */
+
+.producto-pedido {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.producto-pedido > span {
+    font-size: 25px;
+}
+
+.producto-pedido div {
+    flex: 1;
+}
+
+.producto-pedido strong {
+    font-size: 14px;
+}
+
+.producto-pedido p {
+    margin-top: 5px;
+
+    font-size: 14px;
+}
+
+.producto-pedido button {
+    border: none;
+
+    background: none;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* PEDIDO VACÍO */
+
+.pedido-vacio {
+    color: #777;
+
+    font-size: 14px;
+
+    padding: 15px 0;
+}
+
+
+
+
+.total {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 20px 0;
+
+    font-size: 17px;
+}
+
+
+
+
+.realizar {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #8b5e3c;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.realizar:hover {
+    background-color: #70472d;
+}
+
+
+
+
+.productos {
+    padding: 25px 50px 50px;
+}
+
+.productos h2 {
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+
+
+
+.categorias {
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+.categoria {
+    color: #8b5e3c;
+
+    cursor: pointer;
+}
+
+.categoria:hover {
+    text-decoration: underline;
+}
+
+.categoria.activa {
+    font-weight: bold;
+
+    text-decoration: underline;
+}
+
+
+
+
+.lista-productos {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+
+
+
+.tarjeta {
+    padding: 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    background-color: white;
+
+    text-align: left;
+}
+
+.icono {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+.precio {
+    font-size: 17px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+
+
+
+.tarjeta button {
+    padding: 8px 18px;
+
+    border: 1px solid #555;
+
+    border-radius: 20px;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.tarjeta button:hover {
+    background-color: #8b5e3c;
+
+    color: white;
+}
+
+
+
+
+.mensaje {
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    background-color: #8b5e3c;
+
+    color: white;
+
+    padding: 15px 20px;
+
+    border-radius: 8px;
+
+    display: none;
+
+    z-index: 100;
+}
+
+
+
+
+@media (max-width: 750px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    main {
+        display: block;
+    }
+
+    .pedido {
+        border-left: none;
+
+        border-top: 1px solid #ddd;
+    }
+
+    .productos {
+        padding: 25px 20px;
+    }
+
+    .bienvenida {
+        padding: 30px 20px;
+    }
+
+    .lista-productos {
+        grid-template-columns: 1fr;
+    }
+}

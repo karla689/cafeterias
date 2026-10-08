@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cafetería</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    
+    <header>
+
+        <div class="logo">
+            ☕ CAFETERÍA
+        </div>
+
+        <nav>
+            <a href="#inicio-seccion">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#pedido">Mi pedido</a>
+        </nav>
+
+    </header>
+
+
+    
+    <main>
+
+        
+        <section class="bienvenida" id="inicio-seccion">
+
+            <h1>¡Bienvenido!</h1>
+
+            <p>
+                Elige tus productos favoritos<br>
+                y realiza tus pedidos fácilmente.
+            </p>
+
+            <button class="buscar" id="buscarBtn">
+                🔍 Buscar productos
+            </button>
+
+        </section>
+
+
+        
+        <aside class="pedido" id="pedido">
+
+            <h2>Tu pedido</h2>
+
+            <div id="listaPedido">
+
+                <p class="pedido-vacio">
+                    Tu pedido está vacío
+                </p>
+
+            </div>
+
+            <div class="total">
+
+                <strong>Total</strong>
+
+                <strong id="total">
+                    $0.00
+                </strong>
+
+            </div>
+
+            <button class="realizar" id="realizarBtn">
+                Realizar pedido
+            </button>
+
+        </aside>
+
+
+        
+        <section class="productos" id="productos">
+
+            <h2>Nuestros productos</h2>
+
+
+            
+            <div class="categorias">
+
+                <span
+                    class="categoria activa"
+                    data-categoria="todos">
+                    Todos
+                </span>
+
+                <span
+                    class="categoria"
+                    data-categoria="alimentos">
+                    Alimentos
+                </span>
+
+                <span
+                    class="categoria"
+                    data-categoria="postres">
+                    Postres
+                </span>
+
+            </div>
+
+
+            
+            <div class="lista-productos">
+
+
+                
+                <div
+                    class="tarjeta"
+                    data-categoria="alimentos">
+
+                    <div class="icono">
+                        🧁
+                    </div>
+
+                    <h3>
+                        Muffin de chocolate
+                    </h3>
+
+                    <p class="precio">
+                        $30.00
+                    </p>
+
+                    <button
+                        class="agregar"
+                        data-nombre="Muffin de chocolate"
+                        data-precio="30">
+
+                        Agregar
+
+                    </button>
+
+                </div>
+
+
+                
+                <div
+                    class="tarjeta"
+                    data-categoria="postres">
+
+                    <div class="icono">
+                        🍦
+                    </div>
+
+                    <h3>
+                        Helado
+                    </h3>
+
+                    <p class="precio">
+                        $25.00
+                    </p>
+
+                    <button
+                        class="agregar"
+                        data-nombre="Helado"
+                        data-precio="25">
+
+                        Agregar
+
+                    </button>
+
+                </div>
+
+
+                
+                <div
+                    class="tarjeta"
+                    data-categoria="alimentos">
+
+                    <div class="icono">
+                        🍪
+                    </div>
+
+                    <h3>
+                        Galletas de chispas
+                    </h3>
+
+                    <p class="precio">
+                        $15.50
+                    </p>
+
+                    <button
+                        class="agregar"
+                        data-nombre="Galletas de chispas"
+                        data-precio="15.50">
+
+                        Agregar
+
+                    </button>
+
+                </div>
+
+
+                
+                <div
+                    class="tarjeta"
+                    data-categoria="postres">
+
+                    <div class="icono">
+                        🍰
+                    </div>
+
+                    <h3>
+                        Cheesecake
+                    </h3>
+
+                    <p class="precio">
+                        $40.00
+                    </p>
+
+                    <button
+                        class="agregar"
+                        data-nombre="Cheesecake"
+                        data-precio="40">
+
+                        Agregar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
